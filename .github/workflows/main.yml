@@ -14,7 +14,7 @@ jobs:
     - name: build env
       run: |
         eval "$(conda shell.bash hook)"
-        conda create -p docs/env --file docs/docs.env.yaml
+        conda env create -p docs/env --file docs/docs.env.yaml
 
     - name: check links
       run: |
@@ -23,7 +23,8 @@ jobs:
         conda activate docs/env
 
         # check for broken links
-        make linkcheck | tee linkcheck.log
+        # make linkcheck | tee linkcheck.log
+        make -C docs linkcheck | tee linkcheck.log
 
         # Prevent completely exiting the test if pattern not found
         grep -w "broken" linkcheck.log > broken ||  true
@@ -39,14 +40,16 @@ jobs:
         # Activate env and build docs
         eval "$(conda shell.bash hook)"
         conda activate docs/env
-        make html
+        # make html
+        make -C docs html
 
         git clone \
           --single-branch \
           --branch gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" \
           /tmp/doc
         rm -rf /tmp/doc/*
-        cp -r build/html/* /tmp/doc
+        # cp -r build/html/* /tmp/doc
+        cp -r docs/_build/html/* /tmp/doc
         touch /tmp/doc/.nojekyll
 
     - name: push artifact
