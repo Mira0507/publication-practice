@@ -6,8 +6,16 @@ Setting up a project
 
 The general steps to use `multiome-wf` in a new project are:
 
-1. **Installation:** download the `repository <https://github.com/NICHD-BSPC/multiome-wf>`_
-to your local system, into the place where you want to perform the data analysis.
+1. **Installation:** download the repository to your local system, into the place
+   where you want to perform the data analysis.
+
+.. code-block:: bash
+
+   # Using SSH keys
+   git clone git@github.com:NICHD-BSPC/multiome-wf.git <project_name>
+
+   # Using HTTPS
+   git clone https://github.com/NICHD-BSPC/multiome-wf.git <project_name>
 
 2. **Configure:** set up ``samples.tsv`` table for experiments and edit configuration file.
 Optionally, set up ``aggregates.tsv`` for cellranger-aggr barcode/library mapping 
