@@ -14,7 +14,7 @@ jobs:
     - name: build env
       run: |
         eval "$(conda shell.bash hook)"
-        conda create -p docs/env --file docs/docs.env.yaml
+        conda env create -p docs/env --file docs/docs.env.yaml
 
     - name: check links
       run: |
