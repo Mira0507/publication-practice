@@ -48,8 +48,7 @@ jobs:
           --branch gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" \
           /tmp/doc
         rm -rf /tmp/doc/*
-        # cp -r build/html/* /tmp/doc
-        cp -r _build/html/* /tmp/doc
+        cp -r build/html/* /tmp/doc
         touch /tmp/doc/.nojekyll
 
     - name: push artifact
