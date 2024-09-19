@@ -24,7 +24,7 @@ jobs:
 
         # check for broken links
         # make linkcheck | tee linkcheck.log
-        make -C docs linkcheck | tee -C docs linkcheck.log
+        make -C docs linkcheck | tee linkcheck.log
 
         # Prevent completely exiting the test if pattern not found
         grep -w "broken" linkcheck.log > broken ||  true
