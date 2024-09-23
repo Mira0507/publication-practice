@@ -5,6 +5,8 @@
 
 name: main
 on: [push]
+permissions: 
+  contents: write
 jobs:
   build-and-test:
     runs-on: "ubuntu-latest"
