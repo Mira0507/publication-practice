@@ -199,9 +199,12 @@ depending on the analysis configurations. Refer to the <a class="reference inter
 </section>
 <section id="my-multiome-atac-seq-input-organism-is-neither-human-nor-mouse">
 <h2>My Multiome/ATAC-seq input organism is neither human nor mouse<a class="headerlink" href="#my-multiome-atac-seq-input-organism-is-neither-human-nor-mouse" title="Link to this heading"></a></h2>
-<p>The current version of <cite>multiome-wf</cite> requires input ATAC reads to be mapped to either the <strong>mm10
-(mouse) or hg38 (human)</strong> reference genomes. Input from other organisms, or reads from mouse/human
-mapped to different reference genomes, are not supported at this time.</p>
+<p>The current version of <cite>multiome-wf</cite> provides two options for annotating genomic loci:
+using <code class="docutils literal notranslate"><span class="pre">EnsDb</span></code> packages in R or a user’s <code class="docutils literal notranslate"><span class="pre">GTF</span></code> file. Users can configure this annotation option
+in the <a class="reference internal" href="../configuration/config-yaml.html#config-annotation"><span class="std std-ref">ANNOTATION field</span></a>. One limitation of the <code class="docutils literal notranslate"><span class="pre">EnsDb</span></code> option is that only the <strong>mm10
+(mouse) and hg38 (human)</strong> reference genomes are available with this package.</p>
+<p>Input from other organisms, or reads from mouse/human mapped to different reference genomes, are
+supported through the <code class="docutils literal notranslate"><span class="pre">GTF</span></code> option.</p>
 </section>
 <section id="chromosome-names-differ-from-my-input-in-multiome-atac-seq">
 <h2>Chromosome names differ from my input in Multiome/ATAC-seq<a class="headerlink" href="#chromosome-names-differ-from-my-input-in-multiome-atac-seq" title="Link to this heading"></a></h2>

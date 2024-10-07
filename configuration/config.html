@@ -225,9 +225,12 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NIH-H
 </pre></div>
 </div>
 <p>Once the repository is cloned, add <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">MULTIOMEWF_SNAKEMAKE_PROFILE=&quot;path/to/snakemake_profile&quot;</span></code>
-to your bash configuration file (<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>).</p>
-<p>Update your bash config by running the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+to your bash configuration file (<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>) as shown below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update your bash config setting to include MULTIOMEWF_SNAKEMAKE_PROFILE</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export MULTIOMEWF_SNAKEMAKE_PROFILE=&quot;path/to/snakemake_profile&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+
+<span class="c1"># Update your bash environment in use</span>
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
 </pre></div>
 </div>
 <p>After completing your initial configuration for HPC utilization,
