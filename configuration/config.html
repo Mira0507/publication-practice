@@ -188,8 +188,9 @@ don’t need to change anything.</p>
 <li><p>Profile config files from the <a class="reference external" href="https://github.com/NIH-HPC/snakemake_profile.git">NIH HPC</a></p></li>
 </ul>
 <p>The default configuration we provide is specific to the NIH Biowulf cluster.
-To run a workflow on Biowulf, from the top-level project directory,
-run the following command</p>
+To run a workflow on Biowulf, set up your <em>snakemake profile</em> as instructed in the
+<a class="reference internal" href="#new-cluster-config"><span class="std std-ref">Cluster configuration</span></a>. Afterwards, from the top-level project directory,
+run the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>WRAPPER_SLURM
 </pre></div>
 </div>
@@ -226,7 +227,10 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/NIH-H
 </div>
 <p>Once the repository is cloned, add <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">MULTIOMEWF_SNAKEMAKE_PROFILE=&quot;path/to/snakemake_profile&quot;</span></code>
 to your bash configuration file (<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>) as shown below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update your bash config setting to include MULTIOMEWF_SNAKEMAKE_PROFILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: This is for first-time users. You do not need to repeat this step if you</span>
+<span class="c1">#       have set this up before.</span>
+
+<span class="c1"># Update your bash config setting to include MULTIOMEWF_SNAKEMAKE_PROFILE</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export MULTIOMEWF_SNAKEMAKE_PROFILE=&quot;path/to/snakemake_profile&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
 
 <span class="c1"># Update your bash environment in use</span>
