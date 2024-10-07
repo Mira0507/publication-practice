@@ -109,13 +109,13 @@ depending on the analysis configurations. Refer to the :ref:`overview-output` fo
 My Multiome/ATAC-seq input organism is neither human nor mouse
 --------------------------------------------------------------
 
-The current version of `multiome-wf` provides two options to annotate genomic loci: ``EnsDb`` 
-packages in R or a user's ``GTF`` file. Users configure this annotation option in the
-:ref:`config-annotation`. One limitation of using the ``EnsDb`` option is that only the **mm10 
-(mouse) or hg38 (human)** reference genomes are available with this package. 
+The current version of `multiome-wf` provides two options for annotating genomic loci: 
+using ``EnsDb`` packages in R or a user's ``GTF`` file. Users can configure this annotation option 
+in the :ref:`config-annotation`. One limitation of the ``EnsDb`` option is that only the **mm10 
+(mouse) and hg38 (human)** reference genomes are available with this package. 
 
 Input from other organisms, or reads from mouse/human mapped to different reference genomes, are 
-supported using the ``GTF`` option.
+supported through the ``GTF`` option.
 
 
 Chromosome names differ from my input in Multiome/ATAC-seq
