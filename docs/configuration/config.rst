@@ -153,12 +153,15 @@ you can setup your profile on NIH's Biowulf as demonstrated below:
     git clone https://github.com/NIH-HPC/snakemake_profile.git path/to/snakemake_profile
 
 Once the repository is cloned, add ``export MULTIOMEWF_SNAKEMAKE_PROFILE="path/to/snakemake_profile"``
-to your bash configuration file (``~/.bashrc``). 
+to your bash configuration file (``~/.bashrc``) as shown below:
 
-Update your bash config by running the following command:
 
 .. code-block:: bash
 
+    # Update your bash config setting to include MULTIOMEWF_SNAKEMAKE_PROFILE
+    echo 'export MULTIOMEWF_SNAKEMAKE_PROFILE="path/to/snakemake_profile"' >> ~/.bashrc
+
+    # Update your bash environment in use
     source ~/.bashrc
 
 
